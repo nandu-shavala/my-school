@@ -1,0 +1,90 @@
+.container-item {
+  border: 2px solid gray;
+  padding: 50px;
+  padding-bottom: 0px;
+  text-align: center;
+  border-radius: 15px;
+  margin-top: 25px;
+}
+
+.container-item-bottom {
+  border: 2px solid gray;
+  padding: 25px;
+  padding-bottom: 0px;
+  text-align: center;
+  border-radius: 15px;
+  margin-top: 25px;
+  width: 1100px;
+}
+
+.mat-form-field {
+  margin: -10px;
+}
+
+::ng-deep .mat-form-field-outline .mat-form-field-outline-start {
+  border-radius: 50px 0 0 50px !important; /* <== Force the radius */
+  min-width: 100px !important; /* <== Force the width */
+}
+
+/* Make the rounded border for right part */
+::ng-deep .mat-form-field-outline .mat-form-field-outline-end {
+  border-radius: 0 50px 50px 0 !important;
+  min-width: 100px !important;
+}
+
+/* Add this */
+::ng-deep .mat-form-field-outline .mat-form-field-outline-gap {
+  border-color: currentColor !important;
+}
+
+/* Define a background color when the label overlap the input box */
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label mat-label,
+::ng-deep .mat-form-field .mat-form-field-label mat-label {
+  background-color: #fff; /* <== Color of my background */
+  padding: 0 5px; /* <== Add some left and right padding for lisibility */
+}
+
+@media (min-width: 720px) {
+  .container {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 720px) {
+  .container-item {
+    width: 270px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 720px) {
+  .container-bottom {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 720px) {
+  .container-item-bottom {
+    width: auto;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container-item-bottom {
+    width: 900px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+.mat-form-field-outline {
+  width: auto;
+}
